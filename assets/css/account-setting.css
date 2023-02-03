@@ -1,0 +1,622 @@
+/* Fonts */
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #3e3a4e;
+  --color-primary: #35b276;
+  --color-secondary: #151212;
+  --color-brightred: #ed0000;
+  --color-heading: #347571;
+  --color-accent: #f37557;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+  # General
+  --------------------------------------------------------------*/
+body {
+  font-family: var(--font-default);
+  color: var(--color-default);
+  background-color: #f3f6fc;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+.btn-primary-setup {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--color-brightred);
+  --bs-btn-hover-border-color: var(--color-brightred);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--color-brightred);
+  --bs-btn-active-border-color: var(--color-brightred);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--color-primary);
+  --bs-btn-disabled-border-color: var(--color-primary);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.standard-btn {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  color: white;
+  border: 1px solid var(--color-primary);
+}
+.standard-btn:hover {
+  background-color: var(--color-heading);
+  border: 1px solid var(--color-heading);
+  color: white;
+}
+
+/*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: rgb(237, 0, 0, 0.8);
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 16px 10px 16px;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Account Setting
+--------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+} */
+
+.wrapper {
+  padding: 30px 50px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 100px;
+  background-color: white;
+
+  /* margin: 10px auto; */
+  /* max-width: 600px; */
+}
+h4 {
+  letter-spacing: -1px;
+  font-weight: 400;
+}
+.img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 3px solid black;
+  margin-right: 20px;
+}
+#img-section p,
+#deactivate p {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin-right: 20px;
+}
+#img-section b,
+#img-section button,
+#deactivate b {
+  font-size: 14px;
+}
+
+label {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  padding-left: 3px;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+input[placeholder] {
+  font-weight: 500;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 1.5px solid var(--color-primary);
+}
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 40px;
+  padding: 5px 10px;
+  /* -webkit-appearance: none; */
+}
+
+select:focus {
+  outline: none;
+}
+.form-select:focus{
+  border-color: #35b276;
+  box-shadow: none;
+}
+.button {
+  background-color: #fff;
+  color: var(--color-primary);
+}
+.button:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.danger {
+  background-color: #fff;
+  color: #e20404;
+  border: 1px solid #ddd;
+}
+.danger:hover {
+  background-color: #e20404;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 25px 20px;
+  }
+  #deactivate {
+    line-height: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  background: var(--color-default);
+  overflow-y: auto;
+}
+
+#header .profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto;
+  display: block;
+  border: 8px solid var(--color-secondary);
+}
+
+.profile .logout,
+.profile .logout:focus {
+  background: var(--color-primary);
+  padding: 3px 12px;
+  border-radius: 34px;
+  color: #fff;
+}
+
+.profile .logout:hover,
+.profile .logout:focus:hover {
+  color: #fff;
+  cursor: pointer;
+  background: var(--color-brightred);
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: var(--font-primary);
+}
+
+#header .profile div {
+  margin-top: 13px;
+}
+
+#header .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: var(--color-secondary);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .social-links a:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+
+.text-btn {
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.profile div {
+  text-align: center;
+}
+
+.nav-menu {
+  padding: 30px;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px 0px 15px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i {
+  color: var(--color-primary);
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: var(--color-primary);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+#tracking_table_id_filter input,
+#package_table_id_filter input {
+  border: 1px solid var(--color-primary);
+}
+
+/* -----------------------
+# Forgot Password Section
+-------------------------------------------------------------- */
+.forgotpassDiv {
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  box-shadow: 1px 7px 36px -18px rgba(22, 20, 20, 0.8);
+  border: 2px var(--color-primary);
+  padding: 16px;
+}
+.forgotpassDiv form {
+  padding: 50px;
+}
+.forgotpassDiv span {
+  font-size: 15px;
+  color: var(--color-default);
+}
+
+.forgotpassDiv label {
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.forgotpassDiv form h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-primary);
+}
+.forgotpassDiv form input {
+  width: -webkit-fill-available;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: var(--color-primary);
+  font-size: 14px;
+  /* background-color: #1a1717ae; */
+  box-shadow: none;
+  /*color: #e2e0e0; */
+  color: var(--color-secondary);
+}
+.forgotpassDiv form span {
+  text-align: right;
+  margin-right: 7px;
+  margin-top: -12px;
+  font-size: 14px;
+  color: #e2e0e0;
+  float: right;
+  clear: both;
+  margin-left: 20px;
+}
+.forgotpassDiv form button {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: #e2e0e0;
+  text-align: center;
+  font-size: 19px;
+  padding: 6px 30px;
+  border-radius: 11px;
+  transition-duration: 0.3s;
+  display: block;
+}
+.forgotpassDiv form button:hover {
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: black;
+}
+.forgotpassDiv form div span {
+  float: none;
+  text-align-last: center;
+  font-size: 12px;
+  color: #e2e0e0;
+}
+
+.forgotpassDiv form div {
+  margin-top: 70px;
+}
+
+.text-btn {
+  cursor: pointer;
+}
+
+/* ------------------VIEW RESPONSE POPUP------------ */
+.viewResponseDiv {
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 1px 7px 36px -18px rgba(22, 20, 20, 0.8);
+  border: 2px var(--color-primary);
+  padding: 16px;
+}
+
+.viewResponseDiv form {
+  padding: 20px;
+}
+.viewResponseDiv label {
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.viewResponseDiv span {
+  font-size: 15px;
+  color: #e2e0e0;
+}
+.viewResponseDiv form h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.viewResponseDiv form h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.viewResponseDiv form input {
+  width: -webkit-fill-available;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: var(--color-primary);
+  font-size: 14px;
+  /* background-color: #1a1717ae; */
+  box-shadow: none;
+  /*color: #e2e0e0; */
+  color: var(--color-secondary);
+}
+::placeholder {
+  color: var(--color-secondary);
+}
+.viewResponseDiv form div {
+  margin-top: 70px;
+}
+.viewResponseDiv form span {
+  text-align: right;
+  margin-right: 7px;
+  margin-top: -12px;
+  font-size: 14px;
+  color: #e2e0e0;
+  float: right;
+  clear: both;
+}
+.viewResponseDiv form button {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: #e2e0e0;
+  text-align: center;
+  font-size: 19px;
+  padding: 6px 30px;
+  border-radius: 11px;
+  transition-duration: 0.3s;
+  display: block;
+}
+.viewResponseDiv form button:hover {
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: black;
+}
+.viewResponseDiv form div span {
+  float: none;
+  text-align-last: center;
+  font-size: 12px;
+  color: #e2e0e0;
+}
+.text-btn {
+  cursor: pointer;
+}

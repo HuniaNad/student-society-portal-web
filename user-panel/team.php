@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Our Team</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="../assets/img/newLogo.png" rel="icon" />
+    <link href="../assets/img/newLogo.png" rel="newLogo" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/team.css" rel="stylesheet" />
+
+    <!-- JQuery Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.php" class="logo d-flex align-items-center">
+          <img src="../assets/img/newLogo.png" alt="" />
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php#about">About</a></li>
+            <li><a href="index.php#teams">Teams</a></li>
+            <li><a href="event.php">Events</a></li>
+            <li><a href="team.php" class="active">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>  
+              <li><a class="log-in" data-bs-toggle="modal" data-bs-target="#popup-login">Login</a></li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Login Pop-up Section ======= -->
+    <div id="popup-login" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content loginDiv">
+            <div class="modal-body">
+              <span class="text-btn"
+                data-bs-dismiss="modal">Go back
+              </span>
+
+              <form action="../login.php" method="post">
+                <h2 class="mt-2">Log In</h2>
+                <div class="row mt-5 mb-3">
+                  <input id="email" class="form-control" type="email" name="email" title="email" placeholder="Email" required/>
+                </div>
+                <div class=" row my-3">
+                  <input id="password" class="form-control" type="password" name="password" title="Password" placeholder="Password" required/>
+                </div>
+
+                <span class="text-btn forgotPass" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#popup-forgotpass">Forgot Password?</span>
+
+                <div class="container-fluid">
+                  <div class="row mt-5">
+                    <button type="submit" name="login" class="col btn text-center">Log in</button>
+                  </div>
+                </div> 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Forgot Password Pop-up Section ======= -->
+      <div id="popup-forgotpass" class="modal modal-lg fade">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content forgotpassDiv">
+            <div class="modal-body">
+              <span
+                class="text-btn"
+                data-bs-dismiss="modal"
+                data-bs-toggle="modal"
+                data-bs-target="#popup-login"
+                >Go back
+              </span>
+  
+              <form action="" name="forgot-password">
+                <h2 class="mt-2">Forgot Password</h2>
+                <div class="row mt-5 mb-3">
+                  <input
+                    id="email"
+                    class="form-control"
+                    type="email"
+                    name="emp-id"
+                    title="Email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+  
+                <div class="row my-3">
+                  <input
+                    id="regNo"
+                    class="form-control"
+                    type="regNo"
+                    name="text"
+                    title="regNo"
+                    placeholder="Registration Number"
+                    pattern="[A-Za-z0-9]{4}-[A-Za-z]{3}-[0-9]{3}"
+                    required
+                  />
+                </div>
+  
+                <div class="container">
+                  <div class="row mt-5">
+                    <button type="button" class="col btn text-center">
+                      Send Code
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="background-image: url('../assets/img/comsats/frontView.jpg')"
+        >
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>Our Team</h2>
+                <p>Meet the people behind the Student Society!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="container">
+            <ol>
+              <li><a href="index.php">Home</a></li>
+              <li>Events</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+      <!-- End Breadcrumbs -->
+
+      <!-- ======= Meet Our Core Team Section ======= -->
+      <section id="our-team" class="our-team">
+        <div class="container" data-aos="fade-up">
+          <div>
+            <div class="section-header">
+              <span>Meet Our Core Team</span>
+              <h2>Meet Our Core Team</h2>
+            </div>
+
+            <div class="container-lg">
+            <div class="row gy-4 justify-content-evenly m-2">
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "student_society_portal";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM executive WHERE role IN ('President', 'Vice-President', 'HR')";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                ?>
+                            <!-- Start Card Item -->
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card">
+                                    <div class="text-center" style="color: white; background-color: #f37557; margin-top: 10px;">
+                                        <h3 class="fw-bold"><?php echo $row["role"] ?></h3>
+                                    </div>
+
+                                    <div class="card-img">
+                                        <img src="../assets/img/uploads/<?php echo $row["image"] ?>" alt="" class="img-fluid"/>
+                                    </div>
+
+                                    <h3 class="text-center fw-bold"><a class="stretched-link"><?php echo $row["name"] ?></a></h3>
+                                </div>
+                            </div>
+                            <!-- End Card Item --> 
+                <?php
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </div>
+          </div>
+
+            
+          </div>
+        </div>
+      </section>
+      <!-- ======= End Meet Our Core Team Section ======= -->
+
+      <!-- ======= Meet Our Team Leads Section ======= -->
+      <section id="our-team" class="our-team">
+        <div class="container" data-aos="fade-up">
+          <div>
+            <div class="section-header">
+              <span>Meet Our Core Team</span>
+              <h2>Meet Our Core Team</h2>
+            </div>
+
+            <div class="container-lg">
+            <div class="row gy-4 justify-content-evenly m-2">
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "student_society_portal";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM executive WHERE role IN ('Media Lead', 'Content Lead', 'Graphics Lead')";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                ?>
+                            <!-- Start Card Item -->
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card">
+                                    <div class="text-center" style="color: white; background-color: #f37557; margin-top: 10px;">
+                                        <h3 class="fw-bold"><?php echo $row["role"] ?></h3>
+                                    </div>
+
+                                    <div class="card-img">
+                                        <img src="../assets/img/uploads/<?php echo $row["image"] ?>" alt="" class="img-fluid"/>
+                                    </div>
+
+                                    <h3 class="text-center fw-bold"><a class="stretched-link"><?php echo $row["name"] ?></a></h3>
+                                </div>
+                            </div>
+                            <!-- End Card Item --> 
+                <?php
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </div>
+          </div>
+
+            
+          </div>
+        </div>
+      </section>
+      <!-- ======= End Meet Our Team Leads Section ======= -->
+    </main>
+    <!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+   <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a class="logo d-flex align-items-center">
+              <span>Find Us</span>
+            </a>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="index.php#about">About us</a></li>
+              <li><a href="index.php#teams">Teams</a></li>
+              <li><a href="event.php">Events</a></li>
+              <li><a href="team.php">Our Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Phone:</strong> +1 5589 55488 55<br />
+              <strong>Email:</strong> student_society@services.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Student Society</span></strong
+          >. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Chatbot JS File -->
+    <script src="../assets/js/chatbot.js"></script>
+  </body>
+</html>
